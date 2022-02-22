@@ -26,7 +26,17 @@ int main() {
 
 // generate whole pascal triangle
 void pascal_generate(short total_layers, vector<vector<short>>& triangle) {
-  // code
+  short i = 0;  while (i < total_layers) {
+    vector<short> new_row = { 0 };
+    short j = 0;
+    while (j < (triangle[i].size() - 1)) {
+      new_row.push_back(triangle[i][j] + triangle[i][j + 1]);
+      j++;
+    }
+    new_row.push_back(0);
+    triangle.push_back(new_row);
+    i++;
+  }
 }
 
 
