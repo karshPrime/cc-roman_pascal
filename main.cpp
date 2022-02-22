@@ -39,6 +39,12 @@ void pascal_generate(short total_layers, vector<vector<short>>& triangle) {
   }
 }
 
+bool in_range(short to_check, short min_lim, short max_lim) {
+  if ((to_check >= min_lim) and (to_check < max_lim)) {
+    return (true);
+  }
+  return (false);
+}
 
 // convert one integer into roman number
 string convert_romans(short single_integer) {
@@ -48,6 +54,10 @@ string convert_romans(short single_integer) {
       single_integer -= 1000;
       roman_eq += "M";
     }
+    else if (in_range(single_integer, 400, 500) or in_range(single_integer, 900, 1000)) {
+      single_integer += 100;
+      roman_eq += "C";
+    }
     else if (single_integer >= 500) {
       single_integer -= 500;
       roman_eq += "D";
@@ -55,6 +65,10 @@ string convert_romans(short single_integer) {
     else if (single_integer >= 100) {
       single_integer -= 100;
       roman_eq += "C";
+    }
+    else if (in_range(single_integer, 40, 50) or in_range(single_integer, 90, 100)) {
+      single_integer += 10;
+      roman_eq += "X";
     }
     else if (single_integer >= 50) {
       single_integer -= 50;
