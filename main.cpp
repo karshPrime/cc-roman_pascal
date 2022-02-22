@@ -16,6 +16,11 @@ int main() {
   short layers;
   cin >> layers;
 
+  vector<vector<short>> triangle = { {0, 1, 0} };
+
+  pascal_generate(layers, triangle);
+  print_table(triangle);
+
   return 0;
 }
 
