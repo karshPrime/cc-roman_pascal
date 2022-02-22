@@ -42,7 +42,42 @@ void pascal_generate(short total_layers, vector<vector<short>>& triangle) {
 
 // convert one integer into roman number
 string convert_romans(short single_integer) {
-    // code
+  string roman_eq;
+  while (single_integer > 0) {
+    if (single_integer >= 1000) {
+      single_integer -= 1000;
+      roman_eq += "M";
+    }
+    else if (single_integer >= 500) {
+      single_integer -= 500;
+      roman_eq += "D";
+    }
+    else if (single_integer >= 100) {
+      single_integer -= 100;
+      roman_eq += "C";
+    }
+    else if (single_integer >= 50) {
+      single_integer -= 50;
+      roman_eq += "L";
+    }
+    else if (single_integer >= 10) {
+      single_integer -= 10;
+      roman_eq += "X";
+    }
+    else if ((single_integer == 9) or (single_integer == 4)) {
+      single_integer += 1;
+      roman_eq += "I";
+    }
+    else if (single_integer >= 5) {
+      single_integer -= 5;
+      roman_eq += "V";
+    }
+    else {
+      single_integer -= 1;
+      roman_eq += "I";
+    }
+  }
+  return roman_eq;
 }
 
 
