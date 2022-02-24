@@ -97,5 +97,11 @@ string convert_romans(short single_integer) {
 
 // prints the whole triangle, row by row.
 void print_table(vector<vector<short>>& triangle) {
-  // code
+  for (int i{}; i < triangle.size(); i++) {
+    // triangle[i] is the row
+    for (int j{}; j < triangle[i].size(); j++) {
+      cout << convert_romans(triangle[i][j]) << "\t";
+    }
+    cout << endl;
+  }
 }
