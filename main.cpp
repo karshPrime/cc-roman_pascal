@@ -2,10 +2,7 @@
 #include <vector>;
 
 using std::cout;
-using std::cin;
-using std::endl;
-using std::vector;
-using std::string;
+std::cin, std::endl, std::vector, std::string;
 
 void print_table(vector<vector<short>>& triangle);
 void pascal_generate(short total_layers, vector<vector<short>>& triangle);
@@ -94,7 +91,6 @@ string convert_romans(short single_integer) {
   return roman_eq;
 }
 
-
 // prints the whole triangle, row by row.
 void print_table(vector<vector<short>>& triangle) {
   for (int i{}; i < triangle.size(); i++) {
@@ -105,3 +101,4 @@ void print_table(vector<vector<short>>& triangle) {
     cout << endl;
   }
 }
+pascal_triangle.cpp
