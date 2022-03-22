@@ -1,8 +1,7 @@
 #include <iostream>;
 #include <vector>;
 
-using std::cout;
-std::cin, std::endl, std::vector, std::string;
+using std::cout, std::cin, std::endl, std::vector, std::string;
 
 void print_table(vector<vector<short>>& triangle);
 void pascal_generate(short total_layers, vector<vector<short>>& triangle);
